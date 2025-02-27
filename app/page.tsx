@@ -34,33 +34,33 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-gray-50 py-16 px-6 sm:px-10 lg:px-16">
+      <div className="max-w-6xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl lg:text-6xl tracking-tight">
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight">
             <span className="block">Welcome to the</span>
             <span className="block text-blue-600">Rate My Professor Project Guide</span>
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-xl text-gray-600">
-          Navigate your project journey with our comprehensive guide for <b>GDG AAMU</b> team members.
+          <p className="mt-5 max-w-2xl mx-auto text-lg sm:text-xl text-gray-600">
+            Navigate your project journey with our comprehensive guide for <b>GDG AAMU</b> team members.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {cards.map((card, index) => (
             <Link href={card.href} key={index} className="group">
-              <div className={`h-full rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-xl ${card.bgColor}`}>
+              <div className={`h-full rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-2xl ${card.bgColor}`}>
                 <div className="p-6 flex flex-col h-full justify-between">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-20 mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="flex items-center justify-center h-14 w-14 rounded-md bg-white bg-opacity-20 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={card.icon} />
                     </svg>
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold text-white mb-2">{card.title}</h2>
-                    <p className="text-white text-opacity-90">{card.description}</p>
+                    <h2 className="text-lg sm:text-xl font-bold text-white mb-2">{card.title}</h2>
+                    <p className="text-white text-opacity-90 text-sm sm:text-base">{card.description}</p>
                   </div>
                 </div>
               </div>

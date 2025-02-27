@@ -339,17 +339,17 @@ export default function Timeline() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 bg-gray-50 min-h-screen">
-      <div className="bg-white rounded-xl shadow-xl p-8 mb-12">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-2">Professor Rating Website</h1>
-        <p className="text-center text-gray-600 text-lg mb-8">Project Timeline & E-Board Responsibilities</p>
+    <div className="w-full mx-auto px-2 sm:px-4 py-6 sm:py-12 bg-gray-50 min-h-screen">
+      <div className="bg-white rounded-xl shadow-xl p-4 sm:p-8 mb-6 sm:mb-12">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-2">Professor Rating Website</h1>
+        <p className="text-center text-gray-600 text-base sm:text-lg mb-4 sm:mb-8">Project Timeline & E-Board Responsibilities</p>
         
         {/* Tab Navigation */}
-        <div className="flex justify-center space-x-2 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-6 sm:mb-12">
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`px-6 py-3 rounded-lg font-semibold transition duration-200 ${
+              className={`px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold text-sm sm:text-base transition duration-200 ${
                 activeTab === tab 
                 ? "bg-gray-900 text-white shadow-md transform scale-105" 
                 : "bg-gray-200 text-gray-700 hover:bg-gray-300"
@@ -364,48 +364,48 @@ export default function Timeline() {
       
       <div className="relative">
         {timelineData[activeTab].map((item, index) => (
-          <div key={index} className="relative mb-16">
+          <div key={index} className="relative mb-8 sm:mb-16">
             {/* Connecting line */}
             {index < timelineData[activeTab].length - 1 && (
-              <div className="absolute top-12 bottom-0 left-6 w-1 bg-gray-300 -z-10"></div>
+              <div className="absolute top-12 bottom-0 left-4 sm:left-6 w-1 bg-gray-300 -z-10"></div>
             )}
             
             <div className="flex items-start">
               {/* Circle marker */}
-              <div className={`relative ${item.color} h-12 w-12 rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10 flex-shrink-0`}>
-                <span className="text-white font-bold">{index + 1}</span>
+              <div className={`relative ${item.color} h-8 w-8 sm:h-12 sm:w-12 rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10 flex-shrink-0`}>
+                <span className="text-white font-bold text-xs sm:text-base">{index + 1}</span>
               </div>
               
               {/* Content card */}
-              <div className={`ml-8 flex-1 rounded-xl shadow-md overflow-hidden`}>
+              <div className={`ml-4 sm:ml-8 flex-1 rounded-xl shadow-md overflow-hidden`}>
                 {/* Header */}
-                <div className={`${item.color} text-white p-5`}>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <h2 className="text-2xl font-bold">{item.title}</h2>
-                    <div className="bg-white text-gray-800 px-4 py-1 rounded-full text-sm font-semibold inline-block mt-2 md:mt-0 shadow-sm">
+                <div className={`${item.color} text-white p-3 sm:p-5`}>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold">{item.title}</h2>
+                    <div className="bg-white text-gray-800 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold inline-block mt-2 sm:mt-0 shadow-sm">
                       Weeks {item.weeks}
                     </div>
                   </div>
                 </div>
                 
                 {/* Content */}
-                <div className={`p-6 ${item.light}`}>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className={`p-3 sm:p-6 ${item.light}`}>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-4">
                     {item.tasks.map((task, taskIndex) => (
-                      <li key={taskIndex} className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition duration-200">
+                      <li key={taskIndex} className="bg-white rounded-lg p-3 sm:p-4 shadow-sm hover:shadow-md transition duration-200">
                         <div className="flex items-start">
-                          <div className={`${item.color} rounded-full p-1 mr-3 flex-shrink-0 mt-1`}>
-                            <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <div className={`${item.color} rounded-full p-1 mr-2 sm:mr-3 flex-shrink-0 mt-0.5 sm:mt-1`}>
+                            <svg className="h-3 w-3 sm:h-4 sm:w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <div>
-                            <div className={`${item.text} font-medium mb-1`}>{task.name}</div>
+                          <div className="flex-1 min-w-0">
+                            <div className={`${item.text} font-medium text-sm sm:text-base mb-1 break-words`}>{task.name}</div>
                             <div className="flex items-center">
-                              <svg className="h-4 w-4 text-gray-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <svg className="h-3 w-3 sm:h-4 sm:w-4 text-gray-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                               </svg>
-                              <span className="text-gray-700 text-sm font-medium">{task.leads}</span>
+                              <span className="text-gray-700 text-xs sm:text-sm font-medium truncate">{task.leads}</span>
                             </div>
                           </div>
                         </div>

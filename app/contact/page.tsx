@@ -61,9 +61,14 @@ export default function Contact() {
               </div>
               <div>
                 <span className="font-semibold text-green-600 dark:text-green-400 block text-lg">Slack</span>
-                <span className="text-gray-700 dark:text-gray-300 text-lg">
+                <a 
+                  href="https://gdscprojectsl-zik7571.slack.com/archives/C08DH1WP6UV" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors text-lg"
+                >
                   Join our GDSC AAMU Slack workspace
-                </span>
+                </a>
               </div>
             </li>
             
