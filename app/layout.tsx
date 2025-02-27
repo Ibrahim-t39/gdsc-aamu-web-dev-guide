@@ -27,19 +27,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <span className="text-google-green">C</span>
                 <span className="text-gray-800 ml-2">AAMU WEB DEV</span>
               </Link>
-
+              
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center space-x-4">
                 {["Home", "About", "Timeline", "Team", "Resources", "Contact"].map((item) => (
                   <Link
                     key={item}
-                    href={`/${item.toLowerCase()}`}
+                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                     className="px-3 py-2 text-gray-600 hover:text-gray-900 transition"
                   >
                     {item}
                   </Link>
                 ))}
               </div>
+
 
               {/* Mobile Menu Toggle */}
               <button
