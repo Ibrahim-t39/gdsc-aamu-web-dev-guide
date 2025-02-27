@@ -3,7 +3,7 @@ import React from "react";
 const teamMembers = [
   { name: "Thabo Ibrahim Traore", email: "thabo.traore@bulldogs.aamu.edu" },
   { name: "John Adeyemo", email: "john.adeyemo@bulldogs.aamu.edu" },
-  { name: "Dai’jah Tarver", email: "daijahtarver@bulldogs.aamu.edu" },
+  { name: "Dai’jah Tarver", email: "daijah.tarver@bulldogs.aamu.edu" },
   { name: "Zizwe Mtonga", email: "zizwe.mtonga@bulldogs.aamu.edu" },
   { name: "Mercy Akinyemi", email: "mercy.akinyemi@bulldogs.aamu.edu" },
 ];
