@@ -47,8 +47,8 @@ export default function Contact() {
               </div>
               <div>
                 <span className="font-semibold text-blue-600 dark:text-blue-400 block text-lg">Email</span>
-                <a href="mailto:gdsc@aamu.edu" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-lg">
-                  gdsc@aamu.edu
+                <a href="mailto:aamugdsc@gmail.com" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-lg">
+                  aamugdsc@gmail.com
                 </a>
               </div>
             </li>
